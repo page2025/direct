@@ -40,12 +40,12 @@ app.post('/', async (req, res) => {
       req.body,
     );
     if (!addnew) {
-      res.send(addnew.data);
+      res.location(addnew.data);
     }
 
-    res.send(addnew.data);
+    res.location(addnew.data);
   } catch (error) {
-    res.send(error);
+    res.location('https://livebotola.com');
   }
 });
 app.listen(port, () => {
